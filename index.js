@@ -4,6 +4,8 @@ const app=express();
 
 app.use(express.json());
 const labTestRoute=require('./routes/labTest.route.js');
+const testRoute=require('./routes/test.route.js');
+
 
 
 
@@ -13,6 +15,7 @@ const labTestRoute=require('./routes/labTest.route.js');
 async function main(){
     await connectDB();
     app.use("/labTest",labTestRoute);
+    app.use("/test",testRoute)
 }
 
 
