@@ -12,7 +12,7 @@ const LabTestSchema=new Schema({
     price:Number,
     offerPrice:Number,
     questions:[],
-    test:[]
+    test:[{}]
 }) ;
 
 const LabTest=model('labTest',LabTestSchema)
