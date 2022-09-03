@@ -1,6 +1,8 @@
 const express=require("express");
 const connectDB = require("./dbConnection");
 const app=express();
+const cors=require("cors");
+app.use(cors());
 
 app.use(express.json());
 const labTestRoute=require('./routes/labTest.route.js');
